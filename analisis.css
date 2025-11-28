@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background-color: #f8f9fa;
+  overflow-x: hidden;
+  background-image: url("7731a9dbd0ee0a16a23fad9af37e285f.jpg");
+}
+
+.navbar {
+  background: linear-gradient(135deg, #4371c0e9 0%, #4371c0e9 100%);
+  color: rgb(255, 255, 255);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar nav ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  font-weight: 500;
+}
+
+.navbar nav ul li a:hover {
+  background-color: rgba(31, 68, 216, 0.2);
+}
+
+.nav-links .active {
+    background: rgba(255,255,255,0.35);
+    font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #4065dc;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+  top: 100%;
+  left: 0;
+}
+
+.dropdown-content a {
+  color: rgb(255, 255, 255); 
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: #333; 
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.analysis-header {
+  background: linear-gradient(135deg, #cfe7ff 0%, #cae8ff 100%);
+  color: rgb(32, 19, 130);
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.analysis-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.analysis-header p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.photo-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.photo-section img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.photo-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.analysis-container {
+  max-width: 1500px;
+  margin: auto;
+  padding: 0 2rem 4rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.textbox, .analysis-box {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.textbox::before,
+.analysis-box::before {
+  display: none !important;
+}
+
+.textbox:hover, .analysis-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  transition: all 0.25s ease;
+}
+
+.textbox {
+  border-left: 5px solid skyblue;
+  border-right: 5px solid skyblue;
+}
+
+.analysis-box {
+  border: 10px solid rgb(78, 181, 222); /* Disatukan agar lebih ringkas */
+}
+
+.analysis-box h3 {
+  font-size: 1.7rem;
+  color: #0984e3;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar nav ul {
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 1rem;
+  }
+
+  .analysis-header {
+    padding: 2rem 1rem;
+  }
+
+  .analysis-header h1 {
+    font-size: 2rem;
+  }
+
+  .photo-section img {
+    height: 180px;
+  }
+
+  .analysis-container {
+    grid-template-columns: 1fr;
+  }
+
+  .dropdown-content {
+    position: static;
+    display: none;
+    background-color: rgba(255,255,255,0.1);
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.next-btn {
+  background-color: #3e84d4;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.next-btn:hover {
+  background-color: #a6c5ef;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+}
